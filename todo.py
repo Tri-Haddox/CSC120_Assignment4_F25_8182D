@@ -32,8 +32,6 @@ def create_task(description):
     @return [int] id of the newly added tasks
     """
 
-    global tasks, stats 
-
     if len(tasks) == 0:
         task_id = 1
     else:
@@ -42,7 +40,6 @@ def create_task(description):
     tasks[task_id] = description
     stats[task_id] = False
     return task_id
-
 
 def show_tasks():
     """
@@ -70,7 +67,6 @@ def show_tasks():
             continue
     print(f"{tid}: {desc} - Incomplete")
 
-
 def complete_task(tid):
     """
     Function complete_task() change the task status from False to True.
@@ -89,7 +85,6 @@ def complete_task(tid):
     else:
         return False
 
-
 def delete_task(tid):
     """
     Function delete_task() removes the entry from both dictionaries.
@@ -107,7 +102,6 @@ def delete_task(tid):
         return True
     else:
         return False 
-
 
 def main():
     """

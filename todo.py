@@ -54,7 +54,6 @@ def show_tasks():
 
     @return None
     """
-    global tasks, stats 
 
     print("\n=== Your Todo List ===")
     
@@ -77,7 +76,6 @@ def complete_task(tid):
 
     @return [bool] True if changed, False otherwise
     """
-    global stats
 
     if tid in stats and not stats[tid]:
         stats[tid] = True 
@@ -94,7 +92,6 @@ def delete_task(tid):
 
     @return [bool] True if changed, False otherwise
     """
-    global tasks, stats
 
     if tid in tasks:
         del tasks[tid]
